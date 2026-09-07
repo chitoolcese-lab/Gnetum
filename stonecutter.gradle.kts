@@ -18,9 +18,9 @@ stonecutter parameters {
         else -> "import com.mojang.blaze3d.platform.DestFactor; import com.mojang.blaze3d.platform.SourceFactor;"
     }
     swaps["import_delta_tracker"] = when {
-        swaps["import_delta_tracker"] = when {
-        eval(current.version, ">=1.21") -> "import net.minecraft.client.DeltaTracker;"
-    }
+            eval(current.version, ">=1.21") -> "import net.minecraft.client.DeltaTracker;"
+            else -> "// No delta tracker in this version"
+        }
     swaps["src_factor"] = when {
         eval(current.version, ">=26.2") -> "BlendFactor.$1"
         else -> "SourceFactor.$1"
