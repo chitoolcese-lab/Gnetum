@@ -40,7 +40,7 @@ stonecutter parameters {
         replace("location()", "identifier()")
         replace("com.mojang.blaze3d.platform.GlStateManager", "com.mojang.blaze3d.opengl.GlStateManager")
     }
-    replacements.string(current.parsed >= "1.21.1") {
+    replacements.string(current.parsed >= "1.21") {
         replace("new ResourceLocation", "ResourceLocation.fromNamespaceAndPath")
         replace("float deltaTracker", "DeltaTracker deltaTracker")
     }
