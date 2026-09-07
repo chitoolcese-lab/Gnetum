@@ -28,7 +28,7 @@ public class BossHealthOverlayMixin {
 
 	//? >26 {
 	/*@Inject(method = "extractRenderState", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiling/ProfilerFiller;push(Ljava/lang/String;)V", ordinal = 0))
-	*///? } else >=1.21.1 {
+	*///? } else >=1.21 {
 	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiling/ProfilerFiller;push(Ljava/lang/String;)V", ordinal = 0))
 	//? } else {
 	/*@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/components/BossHealthOverlay;drawBar(Lnet/minecraft/client/gui/GuiGraphics;IILnet/minecraft/world/BossEvent;)V", ordinal = 0))

@@ -42,7 +42,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = HudRenderCallback.class, remap = false)
 public interface HudRenderCallbackMixin {
-    //? >=1.21.1 {
+    //? >=1.21 {
     @WrapOperation(method = "lambda$static$0", at = @At(value = "INVOKE", target = "Lnet/fabricmc/fabric/api/client/rendering/v1/HudRenderCallback;onHudRender(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V"))
     //? } else {
     /^@WrapOperation(method = "lambda$static$0", at = @At(value = "INVOKE", target = "Lnet/fabricmc/fabric/api/client/rendering/v1/HudRenderCallback;onHudRender(Lnet/minecraft/client/gui/GuiGraphics;F)V"))

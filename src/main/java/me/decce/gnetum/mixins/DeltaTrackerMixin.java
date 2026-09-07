@@ -3,7 +3,7 @@ package me.decce.gnetum.mixins;
 import org.spongepowered.asm.mixin.Mixin;
 
 // Note: 1.20.4- in MinecraftMixin
-//? >=1.21.1 {
+//? >=1.21 {
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import me.decce.gnetum.Gnetum;
 import me.decce.gnetum.HudDeltaTracker;

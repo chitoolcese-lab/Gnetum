@@ -136,7 +136,7 @@ public class LegacySodiumPage extends OptionPage {
 	}
 
 	private static <S, T> OptionImpl.Builder<S, T> configure(OptionImpl.Builder<S, T> builder) {
-		//? >=1.21.1 {
+		//? >=1.21 {
 		return builder.setEnabled(enabledOption::getValue);
 		//? } else {
 		/^return builder;

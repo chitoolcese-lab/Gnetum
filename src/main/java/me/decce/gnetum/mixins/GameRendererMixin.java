@@ -67,7 +67,7 @@ public class GameRendererMixin {
 	*///? } else >26 {
 	/*@Inject(method = "extractGui", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;extractRenderState(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V"))
 	private void gnetum$updateDeltaTrackerAndPoseCatchup(DeltaTracker deltaTracker, boolean shouldRenderLevel, boolean resourcesLoaded, CallbackInfo ci, @Local GuiGraphics guiGraphics) {
-	*///? } else >=1.21.1 {
+	*///? } else >=1.21 {
 	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V"))
 	private void gnetum$updateDeltaTrackerAndPoseCatchup(DeltaTracker deltaTracker, boolean bl, CallbackInfo ci, @Local GuiGraphics guiGraphics) {
 	//? } else {
@@ -78,7 +78,7 @@ public class GameRendererMixin {
 			return;
 		}
 
-		//? >=1.21.1 {
+		//? >=1.21 {
 		if (deltaTracker instanceof DeltaTracker.Timer timer) {
 			HudDeltaTracker.update(timer);
 		}
@@ -171,7 +171,7 @@ public class GameRendererMixin {
 		guiGraphics.pose().popPose();
 
 		SharedValues.guiGraphics = null;
-		//? >=1.21.1
+		//? >=1.21
 		SharedValues.deltaTracker = null;
 	}
 
@@ -244,7 +244,7 @@ public class GameRendererMixin {
 	/*private void gnetum$wrapRenderItemInHand(net.minecraft.client.renderer.state.level.CameraRenderState cameraState, float deltaPartialTicks, Matrix4fc modelViewMatrix, Operation<Void> original) {
 	*///? } else if >=1.21.10 {
 	private void gnetum$wrapRenderItemInHand(float f, boolean bl, Matrix4f matrix4f, Operation<Void> original) {
-	//? } else if >=1.21.1 {
+	//? } else if >=1.21 {
 	/*private void gnetum$wrapRenderItemInHand(net.minecraft.client.Camera camera, float f, Matrix4f matrix4f, Operation<Void> original) {
 	*///? } else {
 	/*private void gnetum$wrapRenderItemInHand(PoseStack poseStack, Camera camera, float f, Operation<Void> original) {
@@ -255,7 +255,7 @@ public class GameRendererMixin {
 				/*original.call(cameraState, deltaPartialTicks, modelViewMatrix);
 				 *///? } else if >=1.21.10 {
 				original.call(f, bl, matrix4f);
-				//? } else if >=1.21.1 {
+				//? } else if >=1.21 {
 				/*original.call(camera, f, matrix4f);
 				*///? } else {
 				/*original.call(poseStack, camera, f);

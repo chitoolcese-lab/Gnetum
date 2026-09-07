@@ -13,7 +13,7 @@ public class HudDeltaTracker {
     private static float[] gameTimeDeltaTicks;
     private static boolean logOnce;
 
-    //? >=1.21.1 {
+    //? >=1.21 {
     public static void update(DeltaTracker.Timer timer) {
     //? } else {
     /*public static void update(float f) {
@@ -23,7 +23,7 @@ public class HudDeltaTracker {
         if (realtimeDeltaTicks == null || realtimeDeltaTicks.length != len) {
             reset();
         }
-        //? >=1.21.1 {
+        //? >=1.21 {
         realtimeDeltaTicks[curr] += timer.getRealtimeDeltaTicks();
         gameTimeDeltaTicks[curr] += timer.getGameTimeDeltaTicks();
         //? } else {

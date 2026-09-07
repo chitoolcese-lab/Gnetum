@@ -33,7 +33,7 @@ import static me.decce.gnetum.hud.SharedValues.guiGraphics;
 import me.decce.gnetum.versioned.HudHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-//? >=1.21.1
+//? >=1.21
 import net.minecraft.client.gui.LayeredDraw;
 import java.util.function.Predicate;
 *///?}
@@ -181,7 +181,7 @@ public class HudMixin {
 	}
 	*///? }
 
-	//? } else >=1.21.1 {
+	//? } else >=1.21 {
     /*@SuppressWarnings({"MixinAnnotationTarget", "InvalidInjectorMethodSignature"})
     @WrapWithCondition(method = "render", at = @At(value = "INVOKE", target = "Lnet/fabricmc/fabric/api/client/rendering/v1/HudRenderCallback;onHudRender(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V", remap = false), require = 0, expect = 0)
     private boolean gnetum$renderInjection$fabric(HudRenderCallback instance, GuiGraphics guiGraphics, DeltaTracker deltaTracker) {

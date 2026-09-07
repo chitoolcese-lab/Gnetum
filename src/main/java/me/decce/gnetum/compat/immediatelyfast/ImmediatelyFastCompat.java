@@ -9,7 +9,7 @@ import net.raphimc.immediatelyfastapi.ImmediatelyFastApi;
 
 public class ImmediatelyFastCompat {
     public static final boolean INSTALLED = Gnetum.platform().isModLoaded("immediatelyfast");
-    //? >=1.21.1 {
+    //? >=1.21 {
     public static final boolean USE_BATCHING = true;
     //? } else {
     /^public static final boolean USE_BATCHING = false;

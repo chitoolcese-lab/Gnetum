@@ -24,7 +24,7 @@ import static me.decce.gnetum.hud.SharedValues.*;
 @SuppressWarnings("unused")
 public class VanillaHuds {
     // Split HUD rendering into parts for better distribution
-    //? >=1.21.1 {
+    //? >=1.21 {
     public static final Hud CAMERA_OVERLAYS = Hud.builder()
             .id("camera_overlays")
             .blend(true)

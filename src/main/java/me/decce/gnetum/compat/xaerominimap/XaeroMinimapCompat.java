@@ -35,7 +35,7 @@ public class XaeroMinimapCompat {
 			shouldRenderWaypoint = true;
 			//? >26 {
 			/*HudMod.INSTANCE.getEvents().handleRenderGameOverlayEventPre();
-			*///? } else >=1.21.1 {
+			*///? } else >=1.21 {
 			HudMod.INSTANCE.getEvents().handleRenderGameOverlayEventPre(guiGraphics, deltaTracker.getGameTimeDeltaPartialTick(true));
 			//? } else {
 			/*HudMod.INSTANCE.getEvents().handleRenderGameOverlayEventPre(guiGraphics, deltaTracker);

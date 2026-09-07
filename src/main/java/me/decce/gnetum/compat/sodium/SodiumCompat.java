@@ -10,7 +10,7 @@ public class SodiumCompat {
     public static boolean INSTALLED = Gnetum.platform().isModLoaded("sodium");
 
     public static boolean isVignetteEnabled() {
-        //? >=1.21.1 {
+        //? >=1.21 {
         throw new RuntimeException("Should not reach here");
         //? } else {
         /*//? sodium_legacy {
